@@ -98,7 +98,7 @@ docs: add system spec and roadmap
 
 ### 4.3 Commit 的大小
 
-一個 commit 做**一件事**、而且做完之後測試還是過的。ROADMAP 的一個項目通常是 1–3 個 commit。小 commit 沒有問題，問題是沒有地圖；現在地圖在 `docs/ROADMAP.md`。
+一個 commit 做**一件事**、而且做完之後測試還是過的。ROADMAP 的一個項目通常是 1–3 個 commit。
 
 ### 4.4 Pull Request
 

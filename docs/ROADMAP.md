@@ -1,13 +1,7 @@
 # ROADMAP｜開發路線圖
 
-> **Bilingual on purpose / 刻意做成中英對照：** this file is your progress bar, so there is only one copy of each checkbox. Tick it once.
-> 這份檔案是進度條，每個勾選框只有一份，打勾只要改一個地方。
->
-> **Each session / 每次開工：** read the top entry of `docs/DEVLOG.md` → come back here → find the **first unchecked item** → start.
-> 先看 `docs/DEVLOG.md` 最上面一篇 → 回到這裡 → 找**第一個沒打勾**的項目 → 開始做。
->
-> Change `[ ]` to `[x]` when an item is done and commit it with the code. Every milestone ends in a runnable, demo-able state, so even after a long break GitHub always shows a complete stage.
-> 完成一項就把 `[ ]` 改成 `[x]`，跟程式碼一起 commit。每個里程碑結束時都是可以執行、可以展示的狀態，就算中斷很久，GitHub 上也永遠是一個完整的階段成果。
+> Project progress is tracked in this file only (bilingual, so each item has a single checkbox). An item is checked off in the same commit as its code, once it meets the definition of done in `CONTRIBUTING.md`. Every milestone ends in a runnable, demo-able state.
+> 專案進度只記錄在這份檔案（中英對照，每個項目只有一個勾選框）。項目符合 `CONTRIBUTING.md` 的完成定義後，與程式碼在同一個 commit 中打勾。每個里程碑結束時，系統都是可以執行、可以展示的狀態。
 
 ## Overview｜總覽
 
@@ -21,8 +15,8 @@
 | M5 One-command demo 一鍵 Demo | `docker compose up` demo, GIF in README<br>`docker compose up` 就能展示，README 有 GIF | M |
 | M6 Nuke integration Nuke 整合（加分） | Check a Write node from inside Nuke<br>Nuke 裡選 Write node 直接檢查 | M |
 
-Size: S ≈ a few evenings, M ≈ 1–2 weeks, L ≈ 2–4 weeks — relative only; it depends on your weekly hours.
-大小：S 約幾個晚上、M 約一到兩週、L 約兩到四週，只是相對參考，依你每週投入的時間而定。
+Size is relative effort: S < M < L.
+大小表示相對工作量：S < M < L。
 
 ---
 
@@ -50,7 +44,7 @@ Size: S ≈ a few evenings, M ≈ 1–2 weeks, L ≈ 2–4 weeks — relative on
 - [ ] **M0-9** Add the CI badge to both READMEs\
   兩份 README 加上 CI 徽章
 
-**You will learn｜會學到：** virtual environments, `pyproject.toml`, packages vs modules, how `import` finds files, type hints, pytest basics, `assert`, YAML, what CI is.
+**Concepts covered｜涵蓋觀念：** virtual environments, `pyproject.toml`, packages vs modules, how `import` finds files, type hints, pytest basics, `assert`, YAML, what CI is.
 虛擬環境、`pyproject.toml`、套件與模組、`import` 怎麼找檔案、型別提示、pytest 基本寫法、`assert`、YAML、CI 的概念。
 
 **Done when｜驗收：** GitHub Actions shows a green check. GitHub 的 Actions 顯示綠勾。
@@ -111,7 +105,7 @@ Size: S ≈ a few evenings, M ≈ 1–2 weeks, L ≈ 2–4 weeks — relative on
 - [ ] **M1-20** Tag `v0.1.0` and create a GitHub Release\
   打 tag `v0.1.0` 並建立 Release
 
-**You will learn｜會學到：** `dataclass`, `set` vs `list` performance, regular expressions, `pathlib`, exceptions (`try/except/raise`), custom exceptions, `argparse`, `sys.exit`, the `json` module, pytest fixtures and parametrize, `tmp_path`.
+**Concepts covered｜涵蓋觀念：** `dataclass`, `set` vs `list` performance, regular expressions, `pathlib`, exceptions (`try/except/raise`), custom exceptions, `argparse`, `sys.exit`, the `json` module, pytest fixtures and parametrize, `tmp_path`.
 `dataclass`、`set` 與 `list` 的效能差異、正規表示式、`pathlib`、例外處理、自訂例外、`argparse`、`sys.exit`、`json` 模組、pytest fixture 與 parametrize、`tmp_path`。
 
 **Done when｜驗收：**
@@ -159,7 +153,7 @@ uv run vfxsm scan sample_renders/DEMO/SEQ010/SH010/lighting/beauty/v001 --shot S
 - [ ] **M2-15** Write `docs/adr/0002-…` (EN + ZH) for any design change made in this milestone\
   寫第二份 ADR（中英）記錄這階段的設計變更
 
-**You will learn｜會學到：** HTTP methods and status codes, REST design, Pydantic, SQLAlchemy ORM, database constraints, why migrations exist, dependency injection (FastAPI `Depends`), Docker basics, environment variables.
+**Concepts covered｜涵蓋觀念：** HTTP methods and status codes, REST design, Pydantic, SQLAlchemy ORM, database constraints, why migrations exist, dependency injection (FastAPI `Depends`), Docker basics, environment variables.
 HTTP 方法與狀態碼、REST 設計、Pydantic、SQLAlchemy ORM、資料庫約束、migration 的意義、依賴注入、Docker 基本操作、環境變數。
 
 **Done when｜驗收：** at `http://localhost:8000/docs`, create project → sequence → shot → version → check, and get a report missing `1003, 1006`.
@@ -187,7 +181,7 @@ HTTP 方法與狀態碼、REST 設計、Pydantic、SQLAlchemy ORM、資料庫約
 - [ ] **M3-7** Worker integration tests: two workers never claim the same run; stuck runs recover\
   整合測試：兩個 worker 不搶同一筆、卡住會復原
 
-**You will learn｜會學到：** sync vs async, processes, database transactions and locks, why `SKIP LOCKED`, the logging module, signal handling.
+**Concepts covered｜涵蓋觀念：** sync vs async, processes, database transactions and locks, why `SKIP LOCKED`, the logging module, signal handling.
 同步與非同步、行程、資料庫 transaction 與 lock、為什麼要 `SKIP LOCKED`、logging 模組、訊號處理。
 
 **Done when｜驗收：** queuing returns 202 immediately; a few seconds later the status is `failed`. Kill the worker mid-run, restart it, and the run is processed again.
@@ -222,7 +216,7 @@ HTTP 方法與狀態碼、REST 設計、Pydantic、SQLAlchemy ORM、資料庫約
 - [ ] **M4-11** CI adds `npm run build`\
   CI 加上前端建置
 
-**You will learn｜會學到：** TypeScript types, TanStack Query caching and polling, and keeping frontend and backend data shapes aligned.
+**Concepts covered｜涵蓋觀念：** TypeScript types, TanStack Query caching and polling, and keeping frontend and backend data shapes aligned.
 TypeScript 型別、TanStack Query 的快取與輪詢、前後端資料格式對齊。
 
 **Done when｜驗收：** success criteria 2 and 3 in SPEC §1.4, entirely in the browser.
@@ -243,8 +237,8 @@ TypeScript 型別、TanStack Query 的快取與輪詢、前後端資料格式對
   在全新資料夾從頭照 README 做一次
 - [ ] **M5-4** Record a demo GIF (missing frames → add files → recheck → passed) for the README\
   錄 demo GIF
-- [ ] **M5-5** README: architecture diagram, tech choices, what you learned\
-  README 加上架構圖、技術選擇、學到什麼
+- [ ] **M5-5** README: architecture diagram, tech choices, lessons learned\
+  README 加上架構圖、技術選擇、開發心得
 - [ ] **M5-6** Sync `README.zh-TW.md`\
   同步中文 README
 - [ ] **M5-7** Tag `v1.0.0`, GitHub Release\
@@ -275,7 +269,7 @@ TypeScript 型別、TanStack Query 的快取與輪詢、前後端資料格式對
 - [ ] **M6-6** Record a GIF of it working inside Nuke\
   錄一段在 Nuke 裡操作的 GIF
 
-**You will learn｜會學到：** DCC Python APIs, how `menu.py` / `init.py` load, `NUKE_PATH`, PySide (Qt) basics.
+**Concepts covered｜涵蓋觀念：** DCC Python APIs, how `menu.py` / `init.py` load, `NUKE_PATH`, PySide (Qt) basics.
 DCC 的 Python API、`menu.py` / `init.py` 載入機制、`NUKE_PATH`、PySide 基礎。
 
 ---

@@ -98,7 +98,7 @@ docs: add system spec and roadmap
 
 ### 4.3 Commit size
 
-One commit does **one thing**, and tests still pass afterwards. One roadmap item is usually 1–3 commits. Small commits are fine; the problem was never small commits, it was having no map. The map is now `docs/ROADMAP.md`.
+One commit does **one thing**, and tests still pass afterwards. One roadmap item is usually 1–3 commits.
 
 ### 4.4 Pull requests
 

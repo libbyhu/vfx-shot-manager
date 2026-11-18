@@ -1,7 +1,7 @@
 # DEVLOG｜開發日誌
 
-> Solves "I forgot where I stopped." Newest entry on top. Bilingual so you practise both every session.
-> 解決「中斷之後忘記做到哪」。最新的寫在最上面。中英對照，每次寫都同時練兩種語言。
+> Progress notes for each development session, newest first.
+> 每次開發的進度紀錄，最新的在最上面。
 
 ## Starting a session (5 min)｜每次開工
 
@@ -21,8 +21,8 @@
 
 ## Ending a session (5 min)｜每次收工
 
-Add a new entry at the top of the log below using this template. Write English first; add Chinese where it helps you.
-在下面日誌最上方新增一篇。先寫英文，需要的地方再補中文。
+Add a new entry at the top of the log below using this template.
+在下面日誌最上方新增一篇，使用這個模板。
 
 ```markdown
 ## YYYY-MM-DD
@@ -32,11 +32,6 @@ Add a new entry at the top of the log below using this template. Write English f
 **Blocked / questions｜卡住／疑問：** (unresolved issues)
 **Next｜下次從這裡開始：** (be specific, e.g. "M1-7, scanner doesn't handle subfolders yet")
 ```
-
-### Continuing with an AI assistant｜跟 AI 助手接續時
-
-Paste these three into any AI chat (Claude, ChatGPT, …): the relevant section of `docs/SPEC.md` (or `SPEC.zh-TW.md`), `docs/ROADMAP.md`, and the top entry of this file. Any conversation can then pick up from the same place.
-把這三樣貼給任何 AI：`docs/SPEC.md`（或 `SPEC.zh-TW.md`）的相關章節、`docs/ROADMAP.md`、這份檔案最上面一篇。換哪個對話都能從同一個地方接下去。
 
 ---
 

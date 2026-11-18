@@ -2,16 +2,16 @@
 
 English | [繁體中文](SPEC.zh-TW.md)
 
-> This document is the "big picture" of the project. Before writing code, decide what to build, what not to build, what the data looks like, how the layers talk to each other, and how things are named.
-> If you find during development that the spec needs to change, **update this document first, then the code**, and record the decision in `docs/adr/`.
+> This document defines the system's scope, naming conventions, architecture, data model, and interfaces. It is the reference for implementation.
+> When the spec changes, update this document before the code. Significant technical decisions are recorded in `docs/adr/`.
 
 | Document | Purpose | When to read |
 | --- | --- | --- |
 | `docs/SPEC.md` (this file; Chinese: `SPEC.zh-TW.md`) | What the system should become | Before starting a new feature |
-| `docs/ROADMAP.md` (bilingual) | Build order, checklist for each step, what you will learn | Every session — find the next unchecked item |
-| `docs/DEVLOG.md` (bilingual) | Dev log: where you stopped, what blocked you, where to start next | First thing when starting, last thing when stopping |
+| `docs/ROADMAP.md` (bilingual) | Milestones, work items, and progress | Before starting a new work item |
+| `docs/DEVLOG.md` (bilingual) | Progress notes for each development session | When resuming work |
 | `CONTRIBUTING.md` (Chinese: `CONTRIBUTING.zh-TW.md`) | Code style, Git branch and commit conventions, definition of done | While coding and committing |
-| `docs/adr/` | Architecture Decision Records (why A instead of B) | When making an important technical choice |
+| `docs/adr/` | Architecture Decision Records (why A instead of B) | When looking up or adding a technical decision |
 
 ---
 
