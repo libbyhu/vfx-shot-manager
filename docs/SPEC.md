@@ -35,6 +35,25 @@ On a VFX production, the render farm occasionally fails a few frames, writes to 
 
 v1 has no login; everyone shares one identity (see §14 Security).
 
+**Where it sits in the pipeline**
+
+The system checks **rendered image sequences**, whichever department produced them. Its main use is as a quality gate at the lighting → comp handoff, where 3D scene data has become 2D images.
+
+```text
+Layout / Animation ──▶ FX ──▶ Lighting ──[ check ]──▶ Comp ──[ check ]──▶ Delivery
+                        └──── FX renders ──[ check ]──┘
+```
+
+| Department | When they use it | Question it answers |
+| --- | --- | --- |
+| Lighting (producer) | After rendering, before handing off to comp | "Is my render complete and ready to hand off?" |
+| FX (producer) | After rendering FX elements | "Is every FX layer complete?" |
+| Comp (consumer) | Before starting a comp | "Is the version I'm about to use complete?" |
+| Comp (producer) | Before client delivery | "Does the final output match the cut's frame range?" |
+| Production | Tracking progress, preparing delivery | "Which shots have passed?" |
+
+Not covered: 3D scene data passed between 3D departments (USD, Alembic caches, VDB). Checking those means reading file contents, not just names and frame numbers (see §1.5).
+
 ### 1.4 Success criteria (v1 is done when all of these hold)
 
 1. After `git clone` on a clean machine, one command from the README starts the whole system.
@@ -45,6 +64,7 @@ v1 has no login; everyone shares one identity (see §14 Security).
 ### 1.5 Out of scope (deliberately not in v1)
 
 - User login and permissions
+- Checking 3D scene data passed between 3D departments (USD, Alembic, VDB)
 - Reading EXR contents (headers, compression, corrupt files, black frames, image quality) — only **filenames** and **frame numbers** are checked
 - Recursive scanning of subfolders
 - Integration with production tracking (ShotGrid / Flow / ftrack)
