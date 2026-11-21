@@ -31,7 +31,7 @@ Size is relative effort: S < M < L.
   建立 `src/vfx_shot_manager/` 和 `tests/`（結構見 SPEC §6.5）
 - [x] **M0-3** Move `find_missing_frames` from `main.py` to `src/vfx_shot_manager/core/validator.py`; delete `main.py`\
   把 `find_missing_frames` 搬到 `core/validator.py`，刪除 `main.py`
-- [ ] **M0-4** Add type hints: `def find_missing_frames(found: set[int], start: int, end: int) -> list[int]:`\
+- [x] **M0-4** Add type hints: `def find_missing_frames(found: set[int], start: int, end: int) -> list[int]:`\
   加上型別提示
 - [ ] **M0-5** First test `tests/core/test_validator.py`; `uv run pytest` passes\
   寫第一個測試，`uv run pytest` 通過
