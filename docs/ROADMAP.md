@@ -25,7 +25,7 @@ Size is relative effort: S < M < L.
 **Goal:** turn a single `main.py` into a proper Python project. Every later feature grows on this skeleton.
 **目標：** 把一個 `main.py` 變成正式的 Python 專案，之後所有功能都長在這個骨架上。
 
-- [ ] **M0-1** Install `uv`; create `pyproject.toml` with `uv init --package` or by hand, Python `>=3.11`\
+- [x] **M0-1** Install `uv`; create `pyproject.toml` with `uv init --package` or by hand, Python `>=3.11`\
   安裝 `uv`，用 `uv init --package` 或手寫 `pyproject.toml`，Python 版本設 `>=3.11`
 - [ ] **M0-2** Create `src/vfx_shot_manager/` and `tests/` (layout in SPEC §6.5)\
   建立 `src/vfx_shot_manager/` 和 `tests/`（結構見 SPEC §6.5）

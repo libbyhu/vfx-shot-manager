@@ -1,0 +1,17 @@
+[project]
+name = "vfx-shot-manager"
+version = "0.0.1"
+description = "Pipeline tool that validates rendered EXR sequences for missing frames, out-of-range frames, and naming errors before delivery."
+readme = "README.md"
+authors = [
+    { name = "Iris Chiu", email = "iris.chiu.dev@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+vfx-shot-manager = "vfx_shot_manager:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
