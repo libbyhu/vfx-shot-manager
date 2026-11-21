@@ -12,18 +12,17 @@ On a VFX show, render farms occasionally drop frames, write to the wrong folder,
 
 ## What works today
 
+Requires [uv](https://docs.astral.sh/uv/).
+
 ```powershell
-python main.py
+uv run vfx-shot-manager
 ```
 
 ```text
-VFX Shot Manager
-SH010
-[1003, 1006]
+SH010 missing frames: [1003, 1006]
 ```
 
-`find_missing_frames` compares sample frames `[1001, 1002, 1004, 1005]` against the inclusive range `1001–1006`.
-
+`find_missing_frames` in `src/vfx_shot_manager/core/validator.py` compares sample frames `[1001, 1002, 1004, 1005]` against the inclusive range `1001–1006`.
 ## Planned system
 
 ```text

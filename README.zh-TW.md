@@ -12,17 +12,17 @@ VFX 製作時，算圖農場偶爾會少算幾格、輸出到錯的資料夾，�
 
 ## 目前可以執行的部分
 
+需要先安裝 [uv](https://docs.astral.sh/uv/)。
+
 ```powershell
-python main.py
+uv run vfx-shot-manager
 ```
 
 ```text
-VFX Shot Manager
-SH010
-[1003, 1006]
+SH010 missing frames: [1003, 1006]
 ```
 
-`find_missing_frames` 用範例影格 `[1001, 1002, 1004, 1005]` 比對包含頭尾的範圍 `1001–1006`。
+`src/vfx_shot_manager/core/validator.py` 中的 `find_missing_frames` 用範例影格 `[1001, 1002, 1004, 1005]` 比對包含頭尾的範圍 `1001–1006`。
 
 ## 規劃中的系統
 

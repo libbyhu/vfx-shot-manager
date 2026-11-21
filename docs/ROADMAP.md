@@ -27,9 +27,9 @@ Size is relative effort: S < M < L.
 
 - [x] **M0-1** Install `uv`; create `pyproject.toml` with `uv init --package` or by hand, Python `>=3.11`\
   安裝 `uv`，用 `uv init --package` 或手寫 `pyproject.toml`，Python 版本設 `>=3.11`
-- [ ] **M0-2** Create `src/vfx_shot_manager/` and `tests/` (layout in SPEC §6.5)\
+- [x] **M0-2** Create `src/vfx_shot_manager/` and `tests/` (layout in SPEC §6.5)\
   建立 `src/vfx_shot_manager/` 和 `tests/`（結構見 SPEC §6.5）
-- [ ] **M0-3** Move `find_missing_frames` from `main.py` to `src/vfx_shot_manager/core/validator.py`; delete `main.py`\
+- [x] **M0-3** Move `find_missing_frames` from `main.py` to `src/vfx_shot_manager/core/validator.py`; delete `main.py`\
   把 `find_missing_frames` 搬到 `core/validator.py`，刪除 `main.py`
 - [ ] **M0-4** Add type hints: `def find_missing_frames(found: set[int], start: int, end: int) -> list[int]:`\
   加上型別提示
