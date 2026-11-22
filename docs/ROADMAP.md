@@ -35,7 +35,7 @@ Size is relative effort: S < M < L.
   加上型別提示
 - [x] **M0-5** First test `tests/core/test_validator.py`; `uv run pytest` passes\
   寫第一個測試，`uv run pytest` 通過
-- [ ] **M0-6** Configure `ruff` in `pyproject.toml`; `uv run ruff check .` and `uv run ruff format .` are clean\
+- [x] **M0-6** Configure `ruff` in `pyproject.toml`; `uv run ruff check .` and `uv run ruff format .` are clean\
   設定 `ruff`，檢查與格式化都沒有錯誤
 - [ ] **M0-7** Add `sample_renders/` to `.gitignore`\
   `.gitignore` 加上 `sample_renders/`
