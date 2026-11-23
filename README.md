@@ -1,10 +1,11 @@
 # VFX Shot Manager
 
+[![CI](https://github.com/libbyhu/vfx-shot-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/libbyhu/vfx-shot-manager/actions/workflows/ci.yml)
 [繁體中文](README.zh-TW.md)
 
 A pipeline tool that checks rendered EXR sequences for missing frames, out-of-range frames, and naming errors before delivery, and keeps a history of every check.
 
-> **Status: early development (Milestone 0).** Only the missing-frame prototype below runs today. Everything else is the planned design, tracked in the [roadmap](docs/ROADMAP.md).
+> **Status: early development (Milestone 0 complete).** Only the missing-frame prototype below runs today. Everything else is the planned design, tracked in the [roadmap](docs/ROADMAP.md).
 
 ## Why
 
@@ -35,7 +36,7 @@ The validation core has no framework or database dependencies, so the CLI, the b
 
 | Milestone | Outcome | Status |
 | --- | --- | --- |
-| M0 Foundation | Package layout, ruff, pytest, CI | 🚧 In progress |
+| M0 Foundation | Package layout, ruff, pytest, CI | ✅ Done |
 | M1 Core + CLI | `vfxsm scan` validates real folders and writes JSON reports | Planned |
 | M2 Database + API | Shots, render versions, and validation runs over REST | Planned |
 | M3 Worker | Queued scans using PostgreSQL `SKIP LOCKED`, stale-job recovery | Planned |

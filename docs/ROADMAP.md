@@ -39,9 +39,9 @@ Size is relative effort: S < M < L.
   設定 `ruff`，檢查與格式化都沒有錯誤
 - [x] **M0-7** Add `sample_renders/` to `.gitignore`\
   `.gitignore` 加上 `sample_renders/`
-- [ ] **M0-8** Create `.github/workflows/ci.yml` running ruff and pytest on push\
+- [x] **M0-8** Create `.github/workflows/ci.yml` running ruff and pytest on push\
   建立 CI：push 時跑 ruff 和 pytest
-- [ ] **M0-9** Add the CI badge to both READMEs\
+- [x] **M0-9** Add the CI badge to both READMEs\
   兩份 README 加上 CI 徽章
 
 **Concepts covered｜涵蓋觀念：** virtual environments, `pyproject.toml`, packages vs modules, how `import` finds files, type hints, pytest basics, `assert`, YAML, what CI is.
