@@ -37,7 +37,7 @@ Size is relative effort: S < M < L.
   寫第一個測試，`uv run pytest` 通過
 - [x] **M0-6** Configure `ruff` in `pyproject.toml`; `uv run ruff check .` and `uv run ruff format .` are clean\
   設定 `ruff`，檢查與格式化都沒有錯誤
-- [ ] **M0-7** Add `sample_renders/` to `.gitignore`\
+- [x] **M0-7** Add `sample_renders/` to `.gitignore`\
   `.gitignore` 加上 `sample_renders/`
 - [ ] **M0-8** Create `.github/workflows/ci.yml` running ruff and pytest on push\
   建立 CI：push 時跑 ruff 和 pytest
