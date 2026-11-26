@@ -34,6 +34,12 @@ Add a new entry at the top of the log below using this template.
 ```
 
 ---
+## 2026-11-23
+
+**Done｜做了：** M0 complete — uv project, src layout, unit tests, ruff, and GitHub Actions CI on Python 3.11 and 3.12 (PRs #1–#7). Added a ruleset requiring PRs and passing checks on `main`.
+**Learned｜學到：** uv and lockfiles, pytest, ruff check vs format, GitHub Actions matrix builds, branch rulesets.
+**Blocked / questions｜卡住／疑問：** None
+**Next｜下次從這裡開始：** M1-1 and M1-2 — error types and FrameRange.
 
 ## 2026-11-18
 
