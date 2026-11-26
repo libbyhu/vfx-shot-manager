@@ -3,7 +3,7 @@ from dataclasses import FrozenInstanceError
 import pytest
 
 from vfx_shot_manager.core.errors import InvalidFrameRangeError, VfxShotManagerError
-from vfx_shot_manager.core.frame_range import FrameRange
+from vfx_shot_manager.core.frame_range import FrameRange, parse_range
 
 
 def test_length_counts_both_ends() -> None:
@@ -49,3 +49,39 @@ def test_is_immutable() -> None:
 
 def test_errors_share_a_base_class() -> None:
     assert issubclass(InvalidFrameRangeError, VfxShotManagerError)
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ("1001-1006", FrameRange(1001, 1006)),
+        ("1001-1001", FrameRange(1001, 1001)),
+        (" 1001-1006 ", FrameRange(1001, 1006)),
+        ("0-10", FrameRange(0, 10)),
+    ],
+)
+def test_parse_range_accepts_valid_text(text: str, expected: FrameRange) -> None:
+    assert parse_range(text) == expected
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "",
+        "1001",
+        "1001-",
+        "-1006",
+        "1001..1006",
+        "a-b",
+        "1001-1006-1010",
+        "1001 - 1006",
+    ],
+)
+def test_parse_range_rejects_malformed_text(text: str) -> None:
+    with pytest.raises(InvalidFrameRangeError):
+        parse_range(text)
+
+
+def test_parse_range_rejects_start_after_end() -> None:
+    with pytest.raises(InvalidFrameRangeError):
+        parse_range("1006-1001")

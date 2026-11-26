@@ -62,7 +62,7 @@ Size is relative effort: S < M < L.
   自訂例外類別
 - [x] **M1-2** `core/frame_range.py`: `FrameRange` dataclass (start, end, `__contains__`, `__len__`, validates start ≤ end)\
   `FrameRange` dataclass，驗證起點 ≤ 終點
-- [ ] **M1-3** `parse_range("1001-1006")` → `FrameRange`\
+- [x] **M1-3** `parse_range("1001-1006")` → `FrameRange`\
   把字串解析成範圍
 - [ ] **M1-4** `compact_frames([1001, 1002, 1003, 1005])` → `"1001-1003,1005"`\
   把影格清單壓縮成業界常見寫法
