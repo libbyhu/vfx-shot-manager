@@ -3,7 +3,7 @@ from dataclasses import FrozenInstanceError
 import pytest
 
 from vfx_shot_manager.core.errors import InvalidFrameRangeError, VfxShotManagerError
-from vfx_shot_manager.core.frame_range import FrameRange, parse_range
+from vfx_shot_manager.core.frame_range import FrameRange, compact_frames, parse_range
 
 
 def test_length_counts_both_ends() -> None:
@@ -85,3 +85,24 @@ def test_parse_range_rejects_malformed_text(text: str) -> None:
 def test_parse_range_rejects_start_after_end() -> None:
     with pytest.raises(InvalidFrameRangeError):
         parse_range("1006-1001")
+
+
+@pytest.mark.parametrize(
+    ("frames", "expected"),
+    [
+        ([], ""),
+        ([1001], "1001"),
+        ([1001, 1002, 1003], "1001-1003"),
+        ([1001, 1002, 1003, 1005], "1001-1003,1005"),
+        ([1001, 1002, 1003, 1005, 1007, 1008], "1001-1003,1005,1007-1008"),
+        ([1003, 1006], "1003,1006"),
+        ([1005, 1001, 1003, 1002], "1001-1003,1005"),
+        ([1001, 1001, 1002], "1001-1002"),
+    ],
+)
+def test_compact_frames(frames: list[int], expected: str) -> None:
+    assert compact_frames(frames) == expected
+
+
+def test_compact_frames_accepts_a_set() -> None:
+    assert compact_frames({1003, 1001, 1002}) == "1001-1003"

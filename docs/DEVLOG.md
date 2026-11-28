@@ -32,6 +32,12 @@ Add a new entry at the top of the log below using this template.
 **Blocked / questions｜卡住／疑問：** (unresolved issues)
 **Next｜下次從這裡開始：** (be specific, e.g. "M1-7, scanner doesn't handle subfolders yet")
 ```
+## 2026-11-26
+
+**Done｜做了：** M1-1 to M1-3 — core exception hierarchy, immutable `FrameRange` dataclass, and `parse_range` for `<start>-<end>` text.
+**Learned｜學到：** custom exceptions, dataclasses with `frozen=True`, `__post_init__`, `__contains__` and `__len__`, regular expressions with `fullmatch`, `pytest.raises`, `pytest.mark.parametrize`.
+**Blocked / questions｜卡住／疑問：** None
+**Next｜下次從這裡開始：** M1-4 — `compact_frames` to display frame lists such as `1001-1003,1005`.
 
 ---
 ## 2026-11-23
