@@ -64,7 +64,7 @@ Size is relative effort: S < M < L.
   `FrameRange` dataclass，驗證起點 ≤ 終點
 - [x] **M1-3** `parse_range("1001-1006")` → `FrameRange`\
   把字串解析成範圍
-- [ ] **M1-4** `compact_frames([1001, 1002, 1003, 1005])` → `"1001-1003,1005"`\
+- [x] **M1-4** `compact_frames([1001, 1002, 1003, 1005])` → `"1001-1003,1005"`\
   把影格清單壓縮成業界常見寫法
 - [ ] **M1-5** `core/naming.py`: filename regex; `parse_filename()` returns `ParsedName` or `None`\
   檔名 regex，解析成功回傳 `ParsedName`，失敗回傳 `None`
